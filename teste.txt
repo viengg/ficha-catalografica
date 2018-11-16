@@ -1,5 +1,0 @@
-Autor = asd
-Titulo = asd
-Descricao = asd
-Notas = asd
-Assunto = asd
