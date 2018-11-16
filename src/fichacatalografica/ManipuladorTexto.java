@@ -42,6 +42,10 @@ public class ManipuladorTexto implements ActionListener{
         {
             gui.getFormulario().setAssunto(event.getActionCommand());
         }
+        else if(event.getSource() == gui.getTextoAluno())
+        {
+            gui.getFormulario().setAluno(event.getActionCommand());
+        }
         
     }
 }

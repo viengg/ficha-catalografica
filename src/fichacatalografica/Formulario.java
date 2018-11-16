@@ -13,6 +13,7 @@ import java.io.*;
  * @author Vien
  */
 public class Formulario {
+    private String aluno;
     private String autor;
     private String titulo;
     private String descricao;
@@ -45,6 +46,15 @@ public class Formulario {
         return assunto;
     }
     
+    public String getAluno()
+    {
+        return aluno;
+    }
+    
+    public void setAluno(String aluno)
+    {
+        this.aluno = aluno;
+    }
     public void setAutor(String autor)
     {
         this.autor = autor;
@@ -77,6 +87,7 @@ public class Formulario {
         descricao = "";
         titulo = "";
         autor = "";
+        aluno = "";
     }
     
     public void writeToFile(String fileName)
@@ -97,7 +108,8 @@ public class Formulario {
     @Override
     public String toString()
     {
-        String s = "Autor = " + autor
+        String s ="Feito por: " + aluno + 
+                  "\r\nAutor = " + autor
                   +"\r\nTitulo = " + titulo
                   +"\r\nDescricao = " + descricao
                   +"\r\nNotas = " + notas

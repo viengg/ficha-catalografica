@@ -1,4 +1,5 @@
-Autor = ROMARIO, Autor
+Feito por: asdasda
+Autor = 
 Titulo = 
 Descricao = 
 Notas = 

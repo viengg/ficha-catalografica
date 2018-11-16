@@ -58,6 +58,11 @@ public class GUI extends javax.swing.JFrame {
         return TextoTitulo;
     }
     
+    public JTextField getTextoAluno()
+    {
+        return textoAluno;
+    }
+    
     public void resetGUI()
     {
         getTextoAssunto().setText("");
@@ -65,6 +70,7 @@ public class GUI extends javax.swing.JFrame {
         getTextoNotas().setText("");
         getTextoDescricao().setText("");
         getTextoTitulo().setText("");
+        getTextoAluno().setText("");
     }
 
     /**
@@ -88,6 +94,8 @@ public class GUI extends javax.swing.JFrame {
         TextoAssunto = new javax.swing.JTextField();
         TextoNotas = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        textoAluno = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ficha Catalográfica Dinâmica");
@@ -124,6 +132,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel6.setText("Matricula do Aluno");
+
+        textoAluno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textoAlunoActionPerformed(evt);
+            }
+        });
+
         jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -135,6 +151,8 @@ public class GUI extends javax.swing.JFrame {
         jLayeredPane1.setLayer(TextoAssunto, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(TextoNotas, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(textoAluno, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -145,8 +163,12 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap(76, Short.MAX_VALUE)
+                .addContainerGap(66, Short.MAX_VALUE)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(textoAluno, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
@@ -175,7 +197,11 @@ public class GUI extends javax.swing.JFrame {
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(28, 28, 28)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(textoAluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(TextoAutor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -195,7 +221,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(TextoAssunto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(56, 56, 56)
+                .addGap(36, 36, 36)
                 .addComponent(jButton1)
                 .addContainerGap(43, Short.MAX_VALUE))
         );
@@ -232,6 +258,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_TextoAutorActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        formulario.setAluno(getTextoAluno().getText());
         formulario.setAssunto(getTextoAssunto().getText());
         formulario.setAutor(getTextoAutor().getText());
         formulario.setDescricao(getTextoDescricao().getText());
@@ -260,6 +287,10 @@ public class GUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void textoAlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoAlunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textoAlunoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -277,6 +308,8 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLayeredPane jLayeredPane1;
+    private javax.swing.JTextField textoAluno;
     // End of variables declaration//GEN-END:variables
 }
