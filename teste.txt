@@ -1,6 +1,0 @@
-Feito por: asdasda
-Autor = 
-Titulo = 
-Descricao = 
-Notas = 
-Assunto = 
