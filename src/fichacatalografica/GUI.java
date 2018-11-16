@@ -271,13 +271,13 @@ public class GUI extends javax.swing.JFrame {
         
         if(response == JOptionPane.NO_OPTION)
         {
-            formulario.writeToFile("teste.txt");
+            formulario.writeToFile("ficha_"+formulario.getAluno()+".txt");
             System.out.println(formulario);
             System.exit(0);
         }
         else if(response == JOptionPane.YES_OPTION)
         {
-            formulario.writeToFile("teste.txt");
+            formulario.writeToFile("ficha_"+formulario.getAluno()+".txt");
             System.out.println(formulario);
             resetGUI();
             formulario.resetForm();
