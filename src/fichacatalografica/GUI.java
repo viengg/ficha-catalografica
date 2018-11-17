@@ -13,19 +13,12 @@ import javax.swing.*;
  */
 public class GUI extends javax.swing.JFrame {
     private final Formulario formulario;
-    private final ManipuladorTexto manipulador;
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
         formulario = new Formulario();
-        manipulador = new ManipuladorTexto(this);
-        TextoAssunto.addActionListener(manipulador);
-        TextoAutor.addActionListener(manipulador);
-        TextoDescricao.addActionListener(manipulador);
-        TextoNotas.addActionListener(manipulador);
-        TextoTitulo.addActionListener(manipulador);
     }
     
     public Formulario getFormulario()
