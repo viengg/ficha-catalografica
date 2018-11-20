@@ -22,8 +22,19 @@ public class Formulario {
     private String notas;
     private String assunto;
     private Date date;
+    private String comentarios;
     
     
+    public void setComentarios(String comentarios)
+    {
+        this.comentarios = comentarios;
+    }
+    
+    public String getComentario()
+    {
+        return comentarios;
+    }
+
     public void setDate()
     {
         date = new Date();
@@ -129,7 +140,8 @@ public class Formulario {
                   +"\r\nTitulo = " + titulo
                   +"\r\nDescricao = " + descricao
                   +"\r\nNotas = " + notas
-                  +"\r\nAssunto = " + assunto +"\r\n";
+                  +"\r\nAssunto = " + assunto 
+                  +"\r\nComentarios = " + comentarios + "\r\n";
         
         return s;
     }      
