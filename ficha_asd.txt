@@ -1,6 +1,0 @@
-Feito por: asd
-Autor = 123
-Titulo = 412
-Descricao = asdf
-Notas = zxcasd
-Assunto = 1234
