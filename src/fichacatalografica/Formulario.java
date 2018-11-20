@@ -6,6 +6,8 @@
 package fichacatalografica;
 
 import java.io.*;
+import java.text.SimpleDateFormat;  
+import java.util.Date; 
 
 
 /**
@@ -19,7 +21,18 @@ public class Formulario {
     private String descricao;
     private String notas;
     private String assunto;
-   
+    private Date date;
+    
+    
+    public void setDate()
+    {
+        date = new Date();
+    }
+    
+    public Date getDate()
+    {
+        return date;
+    }
     
     public String getAutor()
     {
@@ -108,7 +121,10 @@ public class Formulario {
     @Override
     public String toString()
     {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        
         String s ="Feito por: " + aluno + 
+                   " as: " + formatter.format(date) +
                   "\r\nAutor = " + autor
                   +"\r\nTitulo = " + titulo
                   +"\r\nDescricao = " + descricao

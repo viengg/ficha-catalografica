@@ -257,6 +257,7 @@ public class GUI extends javax.swing.JFrame {
         formulario.setDescricao(getTextoDescricao().getText());
         formulario.setNotas(getTextoNotas().getText());
         formulario.setTitulo(getTextoTitulo().getText());
+        formulario.setDate();
         int response = JOptionPane.showConfirmDialog(null, 
                                 "Deseja preencher outra ficha?", 
                                  "Ficha salva com sucesso!",
