@@ -1,5 +1,3 @@
 # ficha-catalografica
 
-Placeholder da FC-d.
-
-Preenche uma ficha catalográfica e escreve ela em um .txt
+A interface possui áreas de preenchimento para os campos de uma ficha catalográfica tradicional, um campo “Matrícula do Aluno”, que serve para identificar unicamente a ficha preenchida por aluno da turma e um campo “Comentários” que pode ser usado pelo aluno para comunicar dúvidas ou pelo professor para esclarecer a sua correção. Após o preenchimento da interface, ao clicar no botão “Imprime Ficha”, os campos são salvos em um arquivo que contém todas as informações preenchidas, além da data e hora em que houve a “impressão”. O professor da disciplina teria acesso a essas fichas preenchidas, que as identificaria pela matrícula do aluno e pela data/hora. As fichas recebidas também poderiam ser corrigidas e mandadas de volta para o aluno que a preencheu, caso houvesse necessidade.
